@@ -4,6 +4,7 @@ This project is for Audio signal class final project.
 ## VAD part
 The current VAD folder contains a pipline for TDNN-LSTM frame work and a Pyannote framework using AMI dataset which is not the main problem we are solving in this project. The pipeline here is just for comparing the result with our result. In order to reproduce the result of these pipelines, please first install the OVAD package using the following commands:
 > git clone https://github.com/desh2608/ovad.git
+> 
 > python setup.py install
 
 ## Goal of this project
