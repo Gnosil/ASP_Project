@@ -1,0 +1,61 @@
+# Running on c07
+# Started at Tue Aug 23 17:09:57 EDT 2022
+# bash -c "export CUDA_VISIBLE_DEVICES=2; /export/c07/sli218/miniconda3/envs/OVAD/bin/python3.8 ./decode.py" 
+2022-08-23 17:10:45,764 INFO [decode.py:158] Loading pre-compiled decoding graph
+2022-08-23 17:10:45,805 INFO [decode.py:164] About to get test cuts
+2022-08-23 17:10:49,047 INFO [decode.py:167] About to create test dataset
+2022-08-23 17:10:49,055 INFO [decode.py:170] About to create test dataloader
+2022-08-23 17:10:49,055 INFO [decode.py:175] About to load model
+2022-08-23 17:10:49,249 INFO [common.py:65] load checkpoint from exp-tl1a-adam-xent/best_model.pt
+2022-08-23 17:10:49,760 INFO [decode.py:187] convert decoding graph to device
+2022-08-23 17:10:49,796 INFO [decode.py:190] About to decode
+2022-08-23 17:10:50,905 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,905 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,905 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,905 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 7 to 5
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+2022-08-23 17:10:50,906 DEBUG [__init__.py:47] Creating converter from 5 to 7
+./decode.py:67: UserWarning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (Triggered internally at  ../aten/src/ATen/native/BinaryOps.cpp:607.)
+  torch.floor_divide(
+2022-08-23 17:10:55,242 INFO [decode.py:108] batch 0, cuts processed until now is 0/24680 (0.000000%)
+2022-08-23 17:11:08,259 INFO [decode.py:108] batch 10, cuts processed until now is 2000/24680 (8.103728%)
+2022-08-23 17:11:21,872 INFO [decode.py:108] batch 20, cuts processed until now is 4000/24680 (16.207455%)
+2022-08-23 17:11:35,057 INFO [decode.py:108] batch 30, cuts processed until now is 6000/24680 (24.311183%)
+2022-08-23 17:11:48,229 INFO [decode.py:108] batch 40, cuts processed until now is 8000/24680 (32.414911%)
+2022-08-23 17:12:01,386 INFO [decode.py:108] batch 50, cuts processed until now is 10000/24680 (40.518639%)
+2022-08-23 17:12:15,403 INFO [decode.py:108] batch 60, cuts processed until now is 12000/24680 (48.622366%)
+2022-08-23 17:12:29,147 INFO [decode.py:108] batch 70, cuts processed until now is 14000/24680 (56.726094%)
+2022-08-23 17:12:42,602 INFO [decode.py:108] batch 80, cuts processed until now is 16000/24680 (64.829822%)
+2022-08-23 17:12:55,910 INFO [decode.py:108] batch 90, cuts processed until now is 18000/24680 (72.933549%)
+2022-08-23 17:13:09,910 INFO [decode.py:108] batch 100, cuts processed until now is 20000/24680 (81.037277%)
+2022-08-23 17:13:23,066 INFO [decode.py:108] batch 110, cuts processed until now is 22000/24680 (89.141005%)
+2022-08-23 17:13:35,944 INFO [decode.py:108] batch 120, cuts processed until now is 24000/24680 (97.244733%)
+2022-08-23 17:13:56,586 INFO [decode.py:203] Results: 
+              precision    recall  f1-score   support
+
+     silence       0.46      0.24      0.31   2526979
+      speech       0.82      0.93      0.87   9813021
+
+    accuracy                           0.79  12340000
+   macro avg       0.64      0.58      0.59  12340000
+weighted avg       0.75      0.79      0.76  12340000
+
+Traceback (most recent call last):
+  File "./decode.py", line 220, in <module>
+    main()
+  File "./decode.py", line 209, in main
+    create_and_write_segments(
+NameError: name 'create_and_write_segments' is not defined
+# Accounting: time=242 threads=1
+# Finished at Tue Aug 23 17:14:00 EDT 2022 with status 1
