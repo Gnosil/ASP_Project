@@ -1,0 +1,1 @@
+This folder is use for holding data from lhotse download command.
